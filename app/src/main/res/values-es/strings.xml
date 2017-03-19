@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lanza Los Dados</string>
+    <string name="shake">Agitar</string>
+    <string name="roll">Lanzar</string>
+    <string name="result">Resultado</string>
+    <string name="red_color">Rojo</string>
+    <string name="green_color">Verde</string>
+    <string name="author">Felipe Céspedes - felipecespedespisso@gmail.com</string>
+</resources>

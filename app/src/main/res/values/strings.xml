@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Roll The Dice</string>
+    <string name="shake">Shake</string>
+    <string name="roll">Roll</string>
+    <string name="result">Result</string>
+    <string name="red_color">Red</string>
+    <string name="green_color">Green</string>
+    <string name="author">Felipe Céspedes - felipecespedespisso@gmail.com</string>
+</resources>
