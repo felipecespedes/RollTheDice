@@ -95,7 +95,8 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textSize="14sp"
-            android:textColor="#212121"/>
+            android:textColor="#212121"
+            android:visibility="invisible"/>
 
     </LinearLayout>
 </RelativeLayout>
