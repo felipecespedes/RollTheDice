@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         this.resources = new int[6];
 
-        this.btnAction.setText(getResources().getString(R.string.shake));
+        this.btnAction.setText(getResources().getString(R.string.roll_dice));
 
         // Initialize red dices
         this.changeDiceColor(DICE_COLOR.RED);
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         if (this.diceThread == null) {
             this.diceThread = new DiceThread(this);
             this.diceThread.start();
-            this.btnAction.setText(getResources().getString(R.string.roll));
+            this.btnAction.setText(getResources().getString(R.string.throw_dice));
 
             return;
         }
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (this.diceThread.wait) {
 
-                this.btnAction.setText(getResources().getString(R.string.roll));
+                this.btnAction.setText(getResources().getString(R.string.throw_dice));
                 this.clearDisplay();
 
                 synchronized (this.diceThread) {
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
             } else {
 
-                this.btnAction.setText(getResources().getString(R.string.shake));
+                this.btnAction.setText(getResources().getString(R.string.roll_dice));
                 this.diceThread.wait = true;
 
                 this.displayResult();
