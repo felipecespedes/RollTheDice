@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (this.diceThread.isAlive()) {
 
-            if (this.diceThread.wait) {
+            if (this.diceThread.isWaiting()) {
 
                 this.btnAction.setText(getResources().getString(R.string.throw_dice));
                 this.clearDisplay();
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
 
                 this.btnAction.setText(getResources().getString(R.string.roll_dice));
-                this.diceThread.wait = true;
+                this.diceThread.setWaitState(true);
 
                 this.displayResult();
             }

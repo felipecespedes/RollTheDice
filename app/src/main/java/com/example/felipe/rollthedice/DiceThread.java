@@ -13,7 +13,7 @@ public class DiceThread extends Thread {
 
     private int randomLeftDice, randomRightDice;
 
-    public boolean wait;
+    private boolean wait;
 
     public DiceThread(MainActivity activity) {
         this.activity = activity;
@@ -26,10 +26,10 @@ public class DiceThread extends Thread {
 
         while (this.next) {
 
-            if (this.wait) {
+            if (this.isWaiting()) {
                 try {
                     wait();
-                    this.wait = false;
+                    this.setWaitState(false);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -54,6 +54,14 @@ public class DiceThread extends Thread {
 
         }
 
+    }
+
+    public boolean isWaiting() {
+        return wait;
+    }
+
+    public void setWaitState(boolean wait) {
+        this.wait = wait;
     }
 
     private int generateRandomNum(int min, int max) {
